@@ -2,6 +2,8 @@
 body {
   font-family: 'Cinzel', serif;
   margin: 20px;
+  background-image: url('https://images.wallpaperscraft.com/image/single/columns_architecture_greek_111145_1600x900.jpg');
+  background-size: 100%;
 }
 
 ol, ul {
@@ -45,9 +47,12 @@ ol, ul {
 
 .game {
   display: flex;
+  justify-content: center;
+  height: 100%;
 }
 .game-board {
-  height: 350px
+  height: 350px;
+  margin-top: 10%;
 }
 
 .game-info {
