@@ -5,12 +5,21 @@ body {
   background-image: url('https://images.wallpaperscraft.com/image/single/columns_architecture_greek_111145_1600x900.jpg');
   background-size: 100%;
 }
-
+.status-type{
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
 ol, ul {
-  padding-left: 30px;
+  display: flex;
   text-decoration: none;
   list-style: none;
-  margin: 10px
+  padding:0;
+  margin: 10px;
+  width: 600px;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .board-row:after {
   clear: both;
@@ -23,8 +32,8 @@ ol, ul {
 }
 
 .square {
-  background: #fff;
-  border: 3px solid #999;
+  background: rgba(255, 255, 255, 0.47);
+  border: 2px double gold;
   float: left;
   font-size: 50px;
   font-weight: bold;
@@ -35,6 +44,11 @@ ol, ul {
   padding: 0;
   text-align: center;
   width: 100px;
+  transition: ease-in .2s;
+}
+.square:hover{
+  border: 4px solid gold;
+  transition: ease-in .2s;
 }
 
 .square:focus {
@@ -46,13 +60,16 @@ ol, ul {
 }
 
 .game {
+  align-items: center;
   display: flex;
   justify-content: center;
   height: 100%;
+  flex-direction: column;
 }
 .game-board {
-  height: 350px;
-  margin-top: 10%;
+  height: 295px;
+  margin-top: 1%;
+  border:4px double gold
 }
 
 .game-info {
@@ -61,7 +78,7 @@ ol, ul {
 li{
   height:50px;
   width: 100px;
-  margin: 7px;
+  margin: 15px;
 }
 .item-selected{
   font-family: 'Cinzel', serif;
@@ -70,9 +87,15 @@ li{
   border-radius: 4px;
   margin: 8px;
   height: 50px;
-  width: 100px;
+  width: 120px;
   background-color: rgb(234, 233, 240);
   color: rgb(37, 33, 33);
+  transition: ease-in .2s;
+}
+.item-selected:hover{
+  border:6px solid gold;
+  background-color: #888;
+  transition: ease-in .2s;
 }
 .not-selected{
   font-family: 'Cinzel', serif;
@@ -80,7 +103,33 @@ li{
   border-radius: 4px;
   margin: 8px;
   height: 50px;
-  width: 100px;
+  width: 120px;
   background-color: rgb(234, 233, 240);
   color: rgb(37, 33, 33);
+  transition: ease-in .2s;
+}
+.not-selected:hover{
+  border:6px solid gold;
+  background-color: #888;
+  transition: ease-in .2s;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
