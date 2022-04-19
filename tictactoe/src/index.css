@@ -1,12 +1,15 @@
+
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font-family: 'Cinzel', serif;
   margin: 20px;
 }
 
 ol, ul {
   padding-left: 30px;
+  text-decoration: none;
+  list-style: none;
+  margin: 10px
 }
-
 .board-row:after {
   clear: both;
   content: "";
@@ -19,17 +22,17 @@ ol, ul {
 
 .square {
   background: #fff;
-  border: 1px solid #999;
+  border: 3px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 50px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 100px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 100px;
 }
 
 .square:focus {
@@ -42,12 +45,37 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
+}
+.game-board {
+  height: 350px
 }
 
 .game-info {
   margin-left: 20px;
 }
+li{
+  height:50px;
+  width: 100px;
+  margin: 7px;
+}
 .item-selected{
+  font-family: 'Cinzel', serif;
   font-weight: bold;
+  border: 6px gold double;
+  border-radius: 4px;
+  margin: 8px;
+  height: 50px;
+  width: 100px;
+  background-color: rgb(234, 233, 240);
+  color: rgb(37, 33, 33);
+}
+.not-selected{
+  font-family: 'Cinzel', serif;
+  border: 3px gold double;
+  border-radius: 4px;
+  margin: 8px;
+  height: 50px;
+  width: 100px;
+  background-color: rgb(234, 233, 240);
+  color: rgb(37, 33, 33);
 }
